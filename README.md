@@ -17,6 +17,8 @@ already-built binary so a fresh box skips the ~9 min compile.
 
 ## Usage (fresh box)
 ```bash
+curl -fsSL https://opencode.ai/install | bash
+
 curl -LsSf https://hf.co/cli/install.sh | bash
 
 # 1. download bundle

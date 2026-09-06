@@ -37,7 +37,7 @@ LD_LIBRARY_PATH=/workspace:$LD_LIBRARY_PATH nohup /workspace/llama-server --mode
 hf download huihui-ai/Huihui-Qwen3.8-Flash-Next-abliterated-GGUF
 # qwen 3.8 flash
 LD_LIBRARY_PATH=/workspace:$LD_LIBRARY_PATH nohup /workspace/llama-server \
-  --model /workspace/models/huihui-qwen3.8-flash-next/Huihui-Qwen3.8-Flash-Next-abliterated-UD-Q4_K_XL.gguf \
+  --model /workspace/.hf_home/hub/models--huihui-ai--Huihui-Qwen3.8-Flash-Next-abliterated-GGUF \
   --host 127.0.0.1 \
   --port 8080 \
   --ctx-size 126000 \

@@ -33,6 +33,20 @@ LD_LIBRARY_PATH=/workspace:$LD_LIBRARY_PATH nohup /workspace/llama-server --mode
   --ctx-size 262144 --n-gpu-layers 999 --parallel 1 --flash-attn on \
   --cache-type-k q8_0 --cache-type-v q8_0 --spec-type draft-mtp --spec-draft-n-max 3 --jinja \
   > /workspace/llama-server.log 2>&1 &
+
+# qwen 3.8 flash
+LD_LIBRARY_PATH=/workspace:$LD_LIBRARY_PATH nohup /workspace/llama-server \
+  --model /workspace/models/huihui-qwen3.8-flash-next/Huihui-Qwen3.8-Flash-Next-abliterated-Q4_K_M.gguf \
+  --host 127.0.0.1 \
+  --port 8080 \
+  --ctx-size 32768 \
+  --n-gpu-layers 999 \
+  --parallel 1 \
+  --flash-attn on \
+  --cache-type-k q8_0 \
+  --cache-type-v q8_0 \
+  --jinja \
+  > /workspace/llama-server.log 2>&1 &
 ```
 
 Note: the tarball was built with `tar czf -C bundle .` so files extract to the *current* directory.

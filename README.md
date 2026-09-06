@@ -17,6 +17,8 @@ already-built binary so a fresh box skips the ~9 min compile.
 
 ## Usage (fresh box)
 ```bash
+curl -LsSf https://hf.co/cli/install.sh | bash
+
 # 1. download bundle
 curl -sL -o /workspace/llama.tar.gz \
   https://github.com/chiaqf/qwen3.8-27b-img/releases/download/v1.0.0/llama-server-portable.tar.gz
